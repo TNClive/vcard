@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #0a0a0b;
+  --color-ink-3: #3a3a40;
+  --color-paper: #f6f4ef;
+  --color-flame: #ff4d00;
+  --color-acid: #c6f53c;
+  --color-muted: #7a7a82;
+  --color-line: #2a2a30;
+  --color-line-soft: #e6e3dc;
+  --font-sans: var(--font-thai), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+.display {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* sans, not mono: the mono face has no Thai glyphs and wide tracking breaks Thai marks */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 2px;
+  background: var(--color-ink);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: var(--color-flame);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 2px;
+  border: 1px solid var(--color-ink);
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+}
+.btn-ghost:hover {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+.field {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--color-line-soft);
+  background: #fff;
+  padding: 0.55rem 0.7rem;
+  font-size: 14px;
+}
+.field:focus {
+  outline: 2px solid var(--color-flame);
+  outline-offset: -1px;
+}
